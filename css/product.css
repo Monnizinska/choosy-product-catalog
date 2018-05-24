@@ -1,0 +1,22 @@
+#product-box .product {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#product-box .etui {
+  background-image: url(../img/etui.png);
+  height: 50vw; }
+
+#product-box .speakers {
+  background-image: url(../img/speakers.png); }
+
+#product-box .headphones {
+  background-image: url(../img/headphones.png);
+  height: 28vw;
+  background-repeat: no-repeat; }
+
+#product-box .earphones {
+  background-image: url(../img/earphones.png); }
+
+#product-box .charger {
+  background-image: url(../img/hoco-mini-plastic-Power-Bank-6000mah-thin-Mobile-Charger-External-Battery-Packs-B8-color-Powerbank-for.jpg_640x640.jpg); }

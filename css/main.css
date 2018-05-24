@@ -1,0 +1,85 @@
+body {
+  overflow-x: hidden;
+  background-color: white;
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0; }
+  body .column {
+    padding: 0;
+    margin: 0; }
+  body #main-nav {
+    background-color: #fff; }
+    body #main-nav .navbar-brand {
+      font-family: 'Jaapokkienchance-regular';
+      color: white;
+      background-color: #300066;
+      padding: 15px;
+      font-size: 45px; }
+    body #main-nav a {
+      text-transform: uppercase;
+      font-size: 18px;
+      color: #666654; }
+    body #main-nav a:hover {
+      border-bottom: solid 1px #666654; }
+    body #main-nav .nav-item {
+      padding-left: 50px; }
+  body footer {
+    height: auto;
+    color: white;
+    background-color: #300066; }
+    body footer .logo {
+      font-family: 'Jaapokkienchance-regular';
+      font-size: 36px; }
+    body footer a {
+      text-decoration: none;
+      color: white;
+      display: block; }
+    body footer a:hover {
+      color: #B2B100;
+      text-decoration: none; }
+    body footer button {
+      background-color: #B2B100;
+      border: solid 2px white;
+      color: white; }
+    body footer button:hover {
+      background-color: transparent;
+      border: solid 2px #B2B100;
+      color: #B2B100; }
+    body footer input {
+      width: 65%; }
+    body footer .social-icon i {
+      text-align: center;
+      margin-left: 10px;
+      font-size: 28px;
+      border: solid 1px white;
+      height: 45px;
+      width: 45px;
+      line-height: 45px;
+      border-radius: 50%; }
+    body footer .social-icon i:hover {
+      background-color: #B2B100;
+      border: solid 2px white;
+      color: white; }
+
+#product-box .product {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#product-box .etui {
+  background-image: url(../img/etui.png);
+  height: 50vw; }
+
+#product-box .speakers {
+  background-image: url(../img/speakers.png); }
+
+#product-box .headphones {
+  background-image: url(../img/headphones.png);
+  height: 28vw;
+  background-repeat: no-repeat; }
+
+#product-box .earphones {
+  background-image: url(../img/earphones.png); }
+
+#product-box .charger {
+  background-image: url(../img/hoco-mini-plastic-Power-Bank-6000mah-thin-Mobile-Charger-External-Battery-Packs-B8-color-Powerbank-for.jpg_640x640.jpg); }
