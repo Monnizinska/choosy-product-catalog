@@ -10,15 +10,18 @@ body {
   body #main-nav {
     background-color: #fff; }
     body #main-nav .navbar-brand {
-      font-family: 'Jaapokkienchance-regular';
-      color: white;
       background-color: #300066;
-      padding: 15px;
       font-size: 45px; }
+      body #main-nav .navbar-brand .logo {
+        height: 2.5vw;
+        min-height: 20px;
+        max-height: 40px; }
     body #main-nav a {
       text-transform: uppercase;
       font-size: 18px;
-      color: #666654; }
+      letter-spacing: 0.35px;
+      color: #666654;
+      border-bottom: solid 1px transparent; }
     body #main-nav a:hover {
       border-bottom: solid 1px #666654; }
     body #main-nav .nav-item {
@@ -26,10 +29,12 @@ body {
   body footer {
     height: auto;
     color: white;
-    background-color: #300066; }
+    background-color: #300066;
+    letter-spacing: 1px; }
     body footer .logo {
-      font-family: 'Jaapokkienchance-regular';
-      font-size: 36px; }
+      height: 2vw;
+      max-height: 30px;
+      min-height: 15px; }
     body footer a {
       text-decoration: none;
       color: white;
@@ -45,8 +50,6 @@ body {
       background-color: transparent;
       border: solid 2px #B2B100;
       color: #B2B100; }
-    body footer input {
-      width: 65%; }
     body footer .social-icon i {
       text-align: center;
       margin-left: 10px;
@@ -64,22 +67,77 @@ body {
 #product-box .product {
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  transition: linear 0.5s all; }
+
+#product-box h4 {
+  font-size: 1.5vw;
+  color: #1C1D05;
+  text-transform: uppercase;
+  padding-top: 3.5vw;
+  padding-left: 1.8vw; }
+
+#product-box .product:hover {
+  background-position: left; }
+
+#product-box .product:hover h4 {
+  color: white;
+  font-size: 3vw;
+  padding-top: 7vw;
+  padding-left: 10%;
+  transition: linear 0.25s all; }
+
+#product-box .mask {
+  height: 100%;
+  width: 100%;
+  opacity: 0.65;
+  color: transparent;
+  transition: linear 0.5s all; }
+
+@media screen and (max-width: 768px) {
+  #product-box .etui,
+  #product-box .headphones {
+    height: 70vh; } }
+
+@media screen and (max-width: 768px) {
+  #product-box .speakers,
+  #product-box .earphones,
+  #product-box .charger {
+    height: 50vh; } }
 
 #product-box .etui {
-  background-image: url(../img/etui.png);
-  height: 50vw; }
+  background-image: url(../img/etui.png); }
+  @media screen and (min-width: 768px) {
+    #product-box .etui {
+      height: 50vw; } }
+
+#product-box .etui:hover .mask {
+  background-color: #300066; }
 
 #product-box .speakers {
   background-image: url(../img/speakers.png); }
 
+#product-box .speakers:hover .mask {
+  background-color: #B2B100; }
+
 #product-box .headphones {
   background-image: url(../img/headphones.png);
-  height: 28vw;
   background-repeat: no-repeat; }
+  @media screen and (min-width: 768px) {
+    #product-box .headphones {
+      height: 28vw; } }
+
+#product-box .headphones:hover .mask {
+  background-color: #300066; }
 
 #product-box .earphones {
   background-image: url(../img/earphones.png); }
 
+#product-box .earphones:hover .mask {
+  background-color: #B2B2B2; }
+
 #product-box .charger {
-  background-image: url(../img/hoco-mini-plastic-Power-Bank-6000mah-thin-Mobile-Charger-External-Battery-Packs-B8-color-Powerbank-for.jpg_640x640.jpg); }
+  background-image: url(../img/charger.png); }
+
+#product-box .charger:hover .mask {
+  background-color: #DB445C; }

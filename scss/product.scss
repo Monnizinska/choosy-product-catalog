@@ -1,27 +1,83 @@
-#product-box{
-    .product{
+@import 'zmienne';
+#product-box {
+    .product {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        transition: linear 0.5s all;
     }
-    
-    .etui{
+    h4 {
+        font-size: 1.5vw;
+        color: #1C1D05;
+        text-transform: uppercase;
+        padding-top: 3.5vw;
+        padding-left: 1.8vw;
+    }
+    .product:hover {
+        background-position: left;
+    }
+    .product:hover h4 {
+        color: white;
+        font-size: 3vw;
+        padding-top: 7vw;
+        padding-left: 10%;
+        transition: linear 0.25s all;
+    }
+    .mask {
+        height: 100%;
+        width: 100%;
+        opacity: 0.65;
+        color: transparent;
+        transition: linear 0.5s all;
+    }
+    .etui,
+    .headphones {
+        @media screen and(max-width: 768px) {
+            height: 70vh;
+        }
+    }
+    .speakers,
+    .earphones,
+    .charger {
+        @media screen and(max-width: 768px) {
+            height: 50vh;
+        }
+    }
+    .etui {
         background-image: url(../img/etui.png);
-        height: 50vw;
+        @media screen and(min-width: 768px) {
+            height: 50vw;
+        }
     }
-    .speakers{
+    .etui:hover .mask {
+        background-color: $purple;
+    }
+    .speakers {
         background-image: url(../img/speakers.png);
     }
-    .headphones{
-        background-image: url(../img/headphones.png);
-        height: 28vw;
-        background-repeat: no-repeat;
-        // background-size: contain;
+    .speakers:hover .mask {
+        background-color: $green;
     }
-    .earphones{
+    .headphones {
+        background-image: url(../img/headphones.png);
+        background-repeat: no-repeat;
+        @media screen and(min-width: 768px) {
+            height: 28vw;
+        }
+    }
+    .headphones:hover .mask {
+        background-color: $purple;
+    }
+    .earphones {
         background-image: url(../img/earphones.png);
     }
-    .charger{
-        background-image: url(../img/hoco-mini-plastic-Power-Bank-6000mah-thin-Mobile-Charger-External-Battery-Packs-B8-color-Powerbank-for.jpg_640x640.jpg)
+    .earphones:hover .mask {
+        background-color: $light-gray;
+    }
+    .charger {
+        background-image: url(../img/charger.png)
+    }
+    .charger:hover .mask {
+        background-color: #DB445C;
     }
 }
