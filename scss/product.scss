@@ -7,21 +7,33 @@
         transition: linear 0.5s all;
     }
     h4 {
-        font-size: 1.5vw;
+        font-size: 24px;
         color: #1C1D05;
         text-transform: uppercase;
         padding-top: 3.5vw;
-        padding-left: 1.8vw;
+        padding-left: 5.5vw;
+        @media screen and(min-width: 768px) {
+            font-size: 1.8vw;
+            padding-left: 2.8vw;
+        }
+        @media screen and(min-width: 992px) {
+            font-size: 1.5vw;
+        }
     }
     .product:hover {
         background-position: left;
     }
     .product:hover h4 {
         color: white;
-        font-size: 3vw;
+        font-size: 10vw;
         padding-top: 7vw;
         padding-left: 10%;
         transition: linear 0.25s all;
+    }
+    .product:hover h4 {
+        @media screen and(min-width: 768px) {
+            font-size: 3vw;
+        }
     }
     .mask {
         height: 100%;
@@ -44,6 +56,7 @@
         }
     }
     .etui {
+        margin-top: 54px;
         background-image: url(../img/etui.png);
         @media screen and(min-width: 768px) {
             height: 50vw;
@@ -80,4 +93,6 @@
     .charger:hover .mask {
         background-color: #DB445C;
     }
+    
 }
+

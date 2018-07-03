@@ -5,21 +5,32 @@
   transition: linear 0.5s all; }
 
 #product-box h4 {
-  font-size: 1.5vw;
+  font-size: 24px;
   color: #1C1D05;
   text-transform: uppercase;
   padding-top: 3.5vw;
-  padding-left: 1.8vw; }
+  padding-left: 5.5vw; }
+  @media screen and (min-width: 768px) {
+    #product-box h4 {
+      font-size: 1.8vw;
+      padding-left: 2.8vw; } }
+  @media screen and (min-width: 992px) {
+    #product-box h4 {
+      font-size: 1.5vw; } }
 
 #product-box .product:hover {
   background-position: left; }
 
 #product-box .product:hover h4 {
   color: white;
-  font-size: 3vw;
+  font-size: 10vw;
   padding-top: 7vw;
   padding-left: 10%;
   transition: linear 0.25s all; }
+
+@media screen and (min-width: 768px) {
+  #product-box .product:hover h4 {
+    font-size: 3vw; } }
 
 #product-box .mask {
   height: 100%;
@@ -40,6 +51,7 @@
     height: 50vh; } }
 
 #product-box .etui {
+  margin-top: 54px;
   background-image: url(../img/etui.png); }
   @media screen and (min-width: 768px) {
     #product-box .etui {

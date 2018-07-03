@@ -8,6 +8,7 @@ body {
     padding: 0;
     margin: 0; }
   body #main-nav {
+    text-align: center;
     background-color: #fff; }
     body #main-nav .navbar-brand {
       background-color: #300066;
@@ -16,17 +17,104 @@ body {
         height: 2.5vw;
         min-height: 20px;
         max-height: 40px; }
-    body #main-nav a {
-      text-transform: uppercase;
-      font-size: 18px;
-      letter-spacing: 0.35px;
-      color: #666654;
-      border-bottom: solid 1px transparent; }
-    body #main-nav a:hover {
-      border-bottom: solid 1px #666654; }
     body #main-nav .nav-item {
-      padding-left: 50px; }
+      padding-left: 3.5vw;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+    body #main-nav .nav-link {
+      width: 200px;
+      padding: 0.7em calc(0.7em * 1.2);
+      display: inline-block;
+      border: 3px solid transparent;
+      position: relative;
+      font-size: 16px;
+      cursor: pointer;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      letter-spacing: 0.35px;
+      color: #666654; }
+      body #main-nav .nav-link a {
+        font-size: 2vw;
+        width: 18vw; }
+      @media screen and (min-width: 992px) {
+        body #main-nav .nav-link {
+          font-size: 1.2vw;
+          width: 14vw; } }
+      body #main-nav .nav-link .text {
+        transform: translate3d(0, 0.7em, 0);
+        display: block;
+        transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s; }
+      body #main-nav .nav-link:after {
+        position: absolute;
+        content: '';
+        bottom: -3px;
+        left: calc(0.7em * 1.2);
+        right: calc(0.7em * 1.2);
+        height: 1.25px;
+        background: #666654;
+        transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
+        transform-origin: left; }
+    body #main-nav .line {
+      position: absolute;
+      background: #666654; }
+      body #main-nav .line.-right, body #main-nav .line.-left {
+        width: 3px;
+        bottom: -3px;
+        top: -3px;
+        transform: scale3d(1, 0, 1); }
+      body #main-nav .line.-top, body #main-nav .line.-bottom {
+        height: 3px;
+        left: -3px;
+        right: -3px;
+        transform: scale3d(0, 1, 1); }
+      body #main-nav .line.-right {
+        right: -3px;
+        transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
+        transform-origin: top; }
+      body #main-nav .line.-top {
+        top: -3px;
+        transition: transform 0.08s linear 0.43s;
+        transform-origin: left; }
+      body #main-nav .line.-left {
+        left: -3px;
+        transition: transform 0.08s linear 0.51s;
+        transform-origin: bottom; }
+      body #main-nav .line.-bottom {
+        bottom: -3px;
+        transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
+        transform-origin: right; }
+    body #main-nav a:hover .text,
+    body #main-nav a:active .text {
+      transform: translate3d(0, 0, 0);
+      transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s; }
+    body #main-nav a:hover:after,
+    body #main-nav a:active:after {
+      transform: scale3d(0, 1, 1);
+      right: -3px;
+      left: -3px;
+      transform-origin: right;
+      transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s; }
+    body #main-nav a:hover .line,
+    body #main-nav a:active .line {
+      transform: scale3d(1, 1, 1); }
+      body #main-nav a:hover .line.-right,
+      body #main-nav a:active .line.-right {
+        transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
+        transform-origin: bottom; }
+      body #main-nav a:hover .line.-top,
+      body #main-nav a:active .line.-top {
+        transition: transform 0.08s linear 0.4s;
+        transform-origin: right; }
+      body #main-nav a:hover .line.-left,
+      body #main-nav a:active .line.-left {
+        transition: transform 0.08s linear 0.48s;
+        transform-origin: top; }
+      body #main-nav a:hover .line.-bottom,
+      body #main-nav a:active .line.-bottom {
+        transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
+        transform-origin: left; }
   body footer {
+    font-size: 14px;
     height: auto;
     color: white;
     background-color: #300066;
@@ -38,30 +126,32 @@ body {
     body footer a {
       text-decoration: none;
       color: white;
-      display: block; }
+      display: block;
+      font-size: 14px;
+      line-height: 30px; }
     body footer a:hover {
       color: #B2B100;
       text-decoration: none; }
     body footer button {
       background-color: #B2B100;
       border: solid 2px white;
-      color: white; }
+      color: white;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px; }
     body footer button:hover {
       background-color: transparent;
       border: solid 2px #B2B100;
       color: #B2B100; }
     body footer .social-icon i {
+      color: rgba(255, 255, 255, 0.7);
       text-align: center;
       margin-left: 10px;
-      font-size: 28px;
-      border: solid 1px white;
+      font-size: 24px;
       height: 45px;
       width: 45px;
       line-height: 45px;
       border-radius: 50%; }
     body footer .social-icon i:hover {
-      background-color: #B2B100;
-      border: solid 2px white;
       color: white; }
 
 #product-box .product {
@@ -71,21 +161,32 @@ body {
   transition: linear 0.5s all; }
 
 #product-box h4 {
-  font-size: 1.5vw;
+  font-size: 24px;
   color: #1C1D05;
   text-transform: uppercase;
   padding-top: 3.5vw;
-  padding-left: 1.8vw; }
+  padding-left: 5.5vw; }
+  @media screen and (min-width: 768px) {
+    #product-box h4 {
+      font-size: 1.8vw;
+      padding-left: 2.8vw; } }
+  @media screen and (min-width: 992px) {
+    #product-box h4 {
+      font-size: 1.5vw; } }
 
 #product-box .product:hover {
   background-position: left; }
 
 #product-box .product:hover h4 {
   color: white;
-  font-size: 3vw;
+  font-size: 10vw;
   padding-top: 7vw;
   padding-left: 10%;
   transition: linear 0.25s all; }
+
+@media screen and (min-width: 768px) {
+  #product-box .product:hover h4 {
+    font-size: 3vw; } }
 
 #product-box .mask {
   height: 100%;
@@ -106,6 +207,7 @@ body {
     height: 50vh; } }
 
 #product-box .etui {
+  margin-top: 54px;
   background-image: url(../img/etui.png); }
   @media screen and (min-width: 768px) {
     #product-box .etui {
