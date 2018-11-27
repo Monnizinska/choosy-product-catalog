@@ -6,6 +6,9 @@
         background-repeat: no-repeat;
         transition: linear 0.5s all;
     }
+    a{
+        text-decoration: none;
+    }
     h4 {
         font-size: 24px;
         color: #1C1D05;
@@ -56,7 +59,7 @@
         }
     }
     .etui {
-        margin-top: 54px;
+        margin-top: 44px;
         background-image: url(../img/etui.png);
         @media screen and(min-width: 768px) {
             height: 50vw;

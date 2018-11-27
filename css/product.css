@@ -4,6 +4,9 @@
   background-repeat: no-repeat;
   transition: linear 0.5s all; }
 
+#product-box a {
+  text-decoration: none; }
+
 #product-box h4 {
   font-size: 24px;
   color: #1C1D05;
@@ -51,7 +54,7 @@
     height: 50vh; } }
 
 #product-box .etui {
-  margin-top: 54px;
+  margin-top: 44px;
   background-image: url(../img/etui.png); }
   @media screen and (min-width: 768px) {
     #product-box .etui {

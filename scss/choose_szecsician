@@ -1,0 +1,125 @@
+@import 'zmienne';
+  .choose-color {
+      height: 40vh;
+      perspective: 76em;
+      perspective-origin: 50% 50px;
+    width: 494px;
+    margin: 250px auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    color: #fff;
+    text-align: center;
+    input {
+        display: none;
+      }
+      .tab {
+        position: absolute;
+        width: 80px;
+        height: 40px;
+        background: pink;
+        right: 0;
+        line-height: 40px;
+        font-weight: 300;
+        
+        &:nth-child(1) { 
+          top: -5px;
+          background: #06D6A0;
+        }
+        &:nth-child(2) {
+          top: 40px;
+          background: #1B9AAA;
+        }
+        &:nth-child(3) {
+          top: 85px;
+          background: #EF476F;
+        }
+        &:nth-child(4) {
+            top: 131px;
+            background: pink;
+        }
+        &:nth-child(5) {
+          top: 170px;
+          background: bisque;
+        }
+        &:nth-child(6) {
+            top: 200px;
+            background: aqua;
+        }
+      }
+  }
+ 
+  
+  .cube {
+    position: relative;
+    margin: 60px auto 0;
+    width: 300px;
+    height: 200px;
+    transform-origin: 0 80px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in;
+  }
+  .tab-content {
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    
+    h1 {
+      font-size: 25px;
+      margin: 75px 0 10px;
+      font-weight: 300;
+    }
+    p {
+      font-size: 12px;
+    }
+    &:nth-child(2) {
+      transform: translateZ(100px);
+      background: #1B9AAA;
+    }
+    &:nth-child(1) {
+      transform: translateZ(100px) rotateX(60deg)
+                 translateY(-198px);
+      transform-origin: top left;
+      background: #06D6A0;
+    }
+    &:nth-child(3) {
+      transform: translateZ(100px) rotateX(-60deg) translateY(200px);
+      transform-origin: bottom center;
+      background: #EF476F;
+    } 
+    &:nth-child(4) {
+      transform: translateZ(-246px) rotateX(-120deg) ;
+        transform-origin: bottom left;
+        background: pink;
+    } 
+    &:nth-child(5) {
+      transform: translateZ(-244px) rotateX(-180deg) translateY(200px);
+      transform-origin: bottom left;
+      background: bisque;
+    } 
+    &:nth-child(6) {
+      transform:  translateZ(-244px) rotateX(120deg);
+      transform-origin: top left;
+        background: aqua;
+    } 
+  }
+  
+  #tab-top:checked ~ .cube {
+    transform: rotateX(-60deg);
+
+  }
+  #tab-front:checked ~ .cube {
+    transform: rotateX(0deg);
+    
+  }
+  #tab-bottom:checked ~ .cube {
+    transform: rotateX(60deg);
+  }
+  #tab-back:checked ~ .cube {
+    transform: rotateX(120deg);
+  }
+  #tab-bottom-2:checked ~ .cube {
+    transform: rotateX(180deg);
+  }
+  #tab-back-2:checked ~ .cube {
+    transform: rotateX(240deg);
+  }

@@ -8,21 +8,28 @@ body {
     .column {
         padding: 0;
         margin: 0;
-    } 
-    // nav style start
+    } // nav style start
     #main-nav {
+        -webkit-box-shadow: 0 8px 6px -6px rgb(218, 217, 217);
+        -moz-box-shadow: 0 8px 6px -6px rgb(218, 217, 217);
+        box-shadow: 0 8px 6px -6px rgb(218, 217, 217);
+        height: 5.5vw;
+        min-height: 70px;
         text-align: center;
         background-color: #fff;
         .navbar-brand {
+            height: 5.5vw;
+            min-height: 70px;
             background-color: $purple;
             font-size: 45px;
             .logo {
-                height: 2.5vw;
+                height: 0.5vw;
                 min-height: 20px;
                 max-height: 40px;
             }
         }
-        .nav-item{
+        .nav-item {
+            background-color: white;
             padding-left: 3.5vw;
             padding-top: 10px;
             padding-bottom: 10px;
@@ -39,7 +46,7 @@ body {
             text-transform: uppercase;
             letter-spacing: 0.35px;
             color: $dark-gray;
-           a{
+            a {
                 font-size: 2vw;
                 width: 18vw;
             }
@@ -135,8 +142,9 @@ body {
                 }
             }
         }
-    } // nav style end
-
+    } 
+    
+    // nav style end
     footer {
         font-size: 14px;
         height: auto;
@@ -186,5 +194,3 @@ body {
         }
     }
 }
-
-@import 'product';

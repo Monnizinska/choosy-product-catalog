@@ -1,0 +1,125 @@
+@import 'zmienne';
+.choose-color {
+  height: 40vh;
+  perspective: 150em;
+  perspective-origin: 55% 210px;
+  width: 95vw;
+  margin: 250px 100px;
+  text-align: center;
+  input {
+    display: none;
+  }
+  .tab {
+    color: white;
+    position: absolute;
+    width: 13vw;
+    height: 40px;
+    background: pink;
+    right: 0;
+    line-height: 40px;
+    font-weight: 300;
+    &:nth-child(1) {
+      top: -5px;
+      background: $green;
+    }
+    &:nth-child(2) {
+      top: 40px;
+      background: $purple;
+    }
+    &:nth-child(3) {
+      top: 85px;
+      background: #DA445C;
+    }
+    &:nth-child(4) {
+      top: 131px;
+      background: #1B9AAA;
+    }
+  }
+}
+
+.cube {
+  position: relative;
+  margin: 60px auto 0;
+  width: 300px;
+  height: 200px;
+  transform-origin: 0 130px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in;
+}
+
+.tab-content {
+  width: 240px;
+  height: 340px;
+  position: absolute;
+  // -webkit-transition: 0.25s;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  img {
+    height: 340px;
+    width: auto;
+    margin-left: -120px;
+    backface-visibility: hidden;
+    position: absolute;
+    z-index: 10;
+  }
+  .bcg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  h1 {
+    font-size: 25px;
+    margin: 75px 0 10px;
+    font-weight: 300;
+  }
+  p {
+    font-size: 12px;
+  }
+  &:nth-child(1) {
+    transform: rotateX(90deg) translateY(-100px);
+    transform-origin: top left;
+    .bcg {
+      background-color: $green;
+    }
+  }
+  &:nth-child(2) {
+    transform: translateZ(240px);
+    .bcg {
+      background: $purple;
+    }
+  }
+  &:nth-child(3) {
+    transform: rotateX(-90deg) translateY(100px);
+    transform-origin: bottom center;
+    .bcg {
+      background: #DA445C;
+      ;
+    }
+  }
+  &:nth-child(4) {
+    transform: rotateX(-180deg) translateZ(100px);
+    .bcg {
+      background: #1B9AAA;
+    }
+  }
+}
+
+#tab-top:checked~.cube {
+  transform: rotateX(-90deg);
+  .bcg {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+  }
+}
+
+#tab-front:checked~.cube {
+  transform: rotateX(0deg);
+}
+
+#tab-bottom:checked~.cube {
+  transform: rotateX(90deg);
+}
+
+#tab-back:checked~.cube {
+  transform: rotateX(180deg);
+}

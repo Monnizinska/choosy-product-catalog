@@ -8,16 +8,24 @@ body {
     padding: 0;
     margin: 0; }
   body #main-nav {
+    -webkit-box-shadow: 0 8px 6px -6px #dad9d9;
+    -moz-box-shadow: 0 8px 6px -6px #dad9d9;
+    box-shadow: 0 8px 6px -6px #dad9d9;
+    height: 5.5vw;
+    min-height: 70px;
     text-align: center;
     background-color: #fff; }
     body #main-nav .navbar-brand {
+      height: 5.5vw;
+      min-height: 70px;
       background-color: #300066;
       font-size: 45px; }
       body #main-nav .navbar-brand .logo {
-        height: 2.5vw;
+        height: 0.5vw;
         min-height: 20px;
         max-height: 40px; }
     body #main-nav .nav-item {
+      background-color: white;
       padding-left: 3.5vw;
       padding-top: 10px;
       padding-bottom: 10px; }
@@ -153,93 +161,3 @@ body {
       border-radius: 50%; }
     body footer .social-icon i:hover {
       color: white; }
-
-#product-box .product {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: linear 0.5s all; }
-
-#product-box h4 {
-  font-size: 24px;
-  color: #1C1D05;
-  text-transform: uppercase;
-  padding-top: 3.5vw;
-  padding-left: 5.5vw; }
-  @media screen and (min-width: 768px) {
-    #product-box h4 {
-      font-size: 1.8vw;
-      padding-left: 2.8vw; } }
-  @media screen and (min-width: 992px) {
-    #product-box h4 {
-      font-size: 1.5vw; } }
-
-#product-box .product:hover {
-  background-position: left; }
-
-#product-box .product:hover h4 {
-  color: white;
-  font-size: 10vw;
-  padding-top: 7vw;
-  padding-left: 10%;
-  transition: linear 0.25s all; }
-
-@media screen and (min-width: 768px) {
-  #product-box .product:hover h4 {
-    font-size: 3vw; } }
-
-#product-box .mask {
-  height: 100%;
-  width: 100%;
-  opacity: 0.65;
-  color: transparent;
-  transition: linear 0.5s all; }
-
-@media screen and (max-width: 768px) {
-  #product-box .etui,
-  #product-box .headphones {
-    height: 70vh; } }
-
-@media screen and (max-width: 768px) {
-  #product-box .speakers,
-  #product-box .earphones,
-  #product-box .charger {
-    height: 50vh; } }
-
-#product-box .etui {
-  margin-top: 54px;
-  background-image: url(../img/etui.png); }
-  @media screen and (min-width: 768px) {
-    #product-box .etui {
-      height: 50vw; } }
-
-#product-box .etui:hover .mask {
-  background-color: #300066; }
-
-#product-box .speakers {
-  background-image: url(../img/speakers.png); }
-
-#product-box .speakers:hover .mask {
-  background-color: #B2B100; }
-
-#product-box .headphones {
-  background-image: url(../img/headphones.png);
-  background-repeat: no-repeat; }
-  @media screen and (min-width: 768px) {
-    #product-box .headphones {
-      height: 28vw; } }
-
-#product-box .headphones:hover .mask {
-  background-color: #300066; }
-
-#product-box .earphones {
-  background-image: url(../img/earphones.png); }
-
-#product-box .earphones:hover .mask {
-  background-color: #B2B2B2; }
-
-#product-box .charger {
-  background-image: url(../img/charger.png); }
-
-#product-box .charger:hover .mask {
-  background-color: #DB445C; }
